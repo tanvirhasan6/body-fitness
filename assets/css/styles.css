@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&display=swap');
 
-body{
+
+*{
+    margin: 0;
+    padding: 0;
     font-family: Inter;
+}
+
+body{   
+    background: #000000;
+    color: #fdfdfd;
+}
+
+#header-with-hero-section{
+    background-image: linear-gradient(to bottom, #000000,#1c1c1c,#000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+#header-nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#header-nav h2{
+    width: 50%;
+}
+
+#header-nav h2{
+    width: 50%;
+}
+
+#header-nav nav>ul{
+    list-style-type: none;
+}
+
+#header-nav nav>ul>li{
+    display: inline;
 }
