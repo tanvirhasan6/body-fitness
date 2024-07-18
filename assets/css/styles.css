@@ -12,12 +12,29 @@ body{
     color: #fdfdfd;
 }
 
-#header-with-hero-section{
+.default-button{
+    background-color: #000000;
+    color: #fdfdfd;
+    padding: 10px 20px;
+    border: 1px solid #292929;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* header start */
+
+
+header{
     background-image: linear-gradient(to bottom, #000000,#1c1c1c,#000000);
+}
+
+/* nav */
+#header-with-hero-section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 25px 100px;
 }
 
 #header-nav{
@@ -29,16 +46,251 @@ body{
 
 #header-nav h2{
     width: 50%;
+    font-style: italic;
+    color: orangered;
 }
 
 #header-nav h2{
     width: 50%;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#header-nav nav{
+    padding: 2px;
+    border: 1px solid #292929;
+    border-radius: 50px;
 }
 
 #header-nav nav>ul{
     list-style-type: none;
 }
 
-#header-nav nav>ul>li{
+#header-nav nav>ul li{
     display: inline;
+    margin-right: 20px;
+}
+
+#header-nav nav>ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fdfdfd;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: .8rem;
+    transition: background .4s ease-in-out;
+}
+
+#header-nav nav>ul li a:hover{
+    background: orangered;
+    transition: background .4s ease-in-out;
+}
+
+#header-nav nav>ul li:last-child{
+    margin-right: 0;
+}
+
+.active{
+    background: #E6533C;
+}
+
+#hamburger-menu{
+    width: 20px;    
+}
+/* nav end */
+
+/* banner start */
+
+#hero{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hero>div{
+    width: 50%;
+}
+
+#hero-text>div:first-child{
+    padding-right: 90px;
+}
+
+#hero-text h3{
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+#hero-text span{
+    font-family: Dancing Script;
+}
+
+#hero-text p{
+    margin-top: 20px;
+    line-height: 1.5;
+    font-size: .8rem;
+    color: #b7b5b5;
+    font-weight: 300;
+}
+
+#hero-buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#hero-buttons button{
+    width: 50%;
+    margin-right: 10px;
+}
+
+#hero-banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#workout-count,#tutorial-count{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: 1px solid #303030;
+    border-radius: 15px;
+    padding: 15px 20px;
+    background: #1c1b1b9e;
+    backdrop-filter: blur(.2rem);
+}
+
+#workout-count{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 10%;
+    left: 12%;
+}
+
+#tutorial-count{
+    top: 20%;
+    left: 55%;
+}
+
+#hero-banner div h3{
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #b2b2b2;
+}
+
+#hero-banner div p{
+    font-size: .7rem;
+    font-weight: 300;
+    color: #b7b5b5;
+}
+
+#video-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50px;
+    background: #E6533C;
+}
+
+/* banner end */
+
+/* header end */
+
+.hide{
+    display: none;
+}
+
+
+/* media query */
+
+@media screen and (min-width:993px){
+    #hamburger-menu{
+        display: none;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:992px){
+
+    #header-with-hero-section{
+        padding:15px;
+    }
+
+    #header-nav{
+        justify-content: space-around;
+    }
+
+    #header-nav h2{
+        width: auto;
+        font-size: 1.5rem;
+    }
+
+    #header-nav nav>ul li a{
+        font-size: .7rem;
+        padding: 3px 7px;
+    }
+
+    #hamburger-menu{
+        display: none;
+    }
+
+    #hero{
+        flex-direction: column;
+    }
+    
+    #hero>div{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #hero-text h3{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:576px){
+
+    #header-with-hero-section{
+        padding:15px;
+    }
+
+    #header-nav{
+        justify-content: space-between;
+    }
+
+    #header-nav nav{
+        display: none;
+    }
+
+    #header-nav h2{
+        width: auto;
+        font-size: 1.5rem;
+    }
+
+    #hamburger-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero{
+        flex-direction: column;
+    }
+    
+    #hero>div{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #hero-text h3{
+        font-size: 1.5rem;
+    }
+
 }
