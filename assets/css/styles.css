@@ -289,6 +289,12 @@ main>section{
     height: auto;
     border: 2px solid #292929;
     border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+#habit-content>div>img:hover{    
+    border: 2px solid #c50000;
+    transition: all .3rgb(180, 0, 0)in-out;
 }
 
 #habit-content>div h4{
@@ -570,6 +576,12 @@ main>section{
     object-fit: cover;
     overflow: hidden;
     border-radius: 15px;
+    transition: all .3s ease-in-out;
+}
+
+#team>div:nth-child(2) img:hover{    
+    filter: hue-rotate(247deg);
+    transition: all .3s ease-in-out;
 }
 
 /* end team */
