@@ -21,6 +21,19 @@ body{
     cursor: pointer;
 }
 
+.default-header{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+    color: #b2b2b2;
+}
+
+.default-para{
+    font-size: .7rem;
+    font-weight: 300;
+    color: #b7b5b5;
+}
+
 /* header start */
 
 
@@ -204,10 +217,395 @@ header{
 
 /* header end */
 
-.hide{
-    display: none;
+/* main section */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
 }
 
+main>section{
+    width: 70%;
+     margin: 0 auto;
+}
+
+/* end main section  */
+
+/* habit section */
+
+#habit-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#habit-header{
+    width: 50%;
+    margin: 15px auto 50px;
+    text-align: center;
+}
+
+#habit-header h3{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#habit-header p{
+    font-size: .9rem;
+}
+
+#habit-content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    justify-content: center;
+}
+
+#habit-content>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#habit-content>div>img{
+    width: 60%;
+    height: auto;
+    border: 2px solid #292929;
+    border-radius: 50%;
+}
+
+#habit-content>div h4{
+    font-size: .8rem;
+    margin: 10px;
+    text-align: center;
+}
+
+#habit-content>div p{
+    font-size: .7rem;    
+    text-align: center;
+}
+
+/* end habit section */
+
+/* extra run section */
+
+#extra-run{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
+    padding: 35px;
+    background: #1a1a1a;
+    border-radius: 15px;
+}
+
+#extra-run>div div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#extra-run div:first-child h3{
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+#extra-run div:first-child p{
+    width: 70%;
+    margin: 25px 0;
+    text-align: left;
+    font-size: .7rem;
+    line-height: 2;
+    color: #b2b2b2;
+}
+
+#extra-run div:nth-child(2){
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background: url(../images/run.jpg) no-repeat center;
+    background-position: 67% 28%;
+}
+
+/* end extra run section */
+
+/* training section */
+
+
+#training>div{
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+#training>div>img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#training>div:nth-child(2){
+    grid-area: fst-box;
+}
+
+#training>div:nth-child(4){
+    grid-area: snd-box;
+}
+
+#training>div:nth-child(6){
+    grid-area: last-box;
+}
+
+#training{
+    display: grid;
+    grid-template-areas: 
+    ' . fst-box fst-box fst-box fst-box . '
+    'snd-box snd-box snd-box . last-box last-box '
+    ;
+}
+
+#training>div>p{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: .7rem;
+    color: #ffffff;
+}
+
+#training>div>div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    opacity: .5;
+}
+
+#training>div:nth-child(1)>div{
+    background: #40b2c6;
+}
+#training>div:nth-child(2)>div{
+    background: #a59018;
+}
+#training>div:nth-child(3)>div{
+    background: #309641;
+}
+#training>div:nth-child(4)>div{
+    background: #4d40c6;
+}
+#training>div:nth-child(5)>div{
+    background: #b840c6;
+}
+#training>div:nth-child(6)>div{
+    background: #c64040;
+}
+
+/* end training section */
+
+/* bmi calculator */
+
+#calculator{
+    /* width: 100%; */
+    background: #292929;
+    padding: 20px 15%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bmihead{
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calculatordiv{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#calculatordiv>div:first-child{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#calculatordiv>div:first-child h4{
+    font-size: 1.2rem;
+}
+
+#calculatordiv table{
+    border-collapse: collapse;
+}
+
+#calculatordiv th,#calculatordiv td{
+    border: 1px solid #303030;
+    font-size: .8rem;
+    padding: 10px;
+    text-align: start;
+    width: 100px !important;
+}
+
+#calculatordiv td{
+    font-size: .6rem;
+}
+#calculatordiv>div:nth-child(2){
+    width: 60%;
+}
+
+
+
+/* end bmi calculator */
+
+/* team */
+
+#team>div:first-child{
+    width: 60%;
+    margin: 100px 20% 50px;
+}
+
+#team>div:first-child h3, #team>div:first-child p{
+    text-align: center;
+}
+
+#team>div:nth-child(2){
+    width: 90%;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    background: #111;
+    border-radius: 25px;
+}
+
+#team>div:nth-child(2)>div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#team>div:nth-child(2)>div>div{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+#team>div:nth-child(2)>div>div h4{
+    font-size: .8rem;
+    text-align: left;
+}
+
+#team>div:nth-child(2)>div>div p{
+    font-size: .6rem;
+    margin-top: 5px;
+    text-align: left;
+    opacity: .75;
+}
+
+#team>div:nth-child(2) img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* end team */
+
+/* footer */
+
+footer{
+    width: 100%;
+    background: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer>section{
+    width: 70%;
+}
+
+footer hr{
+    width: 70%;
+    margin: 20px;
+}
+
+footer section:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+#footer-header{
+    width: 60%;
+}
+
+#footer-header>h2{
+    font-size: 1.8rem;
+    font-style: italic;
+    color: orangered;
+}
+
+#footer-header>p{
+    font-size: .7rem;
+    width: 60%;
+    color: #aaa;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+#footer-link{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+#footer-link h4{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+#footer-link ul{
+    list-style-type: none;
+}
+
+#footer-link ul li{
+    font-size: .8rem;
+    margin-bottom: 15px;
+    color: #999999;
+}
+
+#footer-link ul li:last-child{
+    margin-bottom: 0;
+}
+
+#copyright{
+    text-align: center;
+    font-size: .9rem;
+    color: #999999;
+    margin-bottom: 15px;
+}
+
+/* end footer */
 
 /* media query */
 
@@ -253,6 +651,23 @@ header{
     #hero-text h3{
         font-size: 2.5rem;
     }
+
+    #habit-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    #habit-header{
+        width: 75%;
+        height: auto;
+    }
+
+    #extra-run div:first-child{
+        padding-right: 20px;
+    }
+
+    #extra-run div:first-child h3{
+        font-size: 1.8rem;
+    }
 }
 
 @media screen and (max-width:576px){
@@ -291,6 +706,41 @@ header{
 
     #hero-text h3{
         font-size: 1.5rem;
+    }
+
+    #habit-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    #habit-header{
+        width: 90%;
+        height: auto;
+    }
+    
+    #habit-header h3{
+        font-size: 1.2rem;
+    }
+
+    #habit-header p{
+        font-size: .7rem;
+    }
+
+    #extra-run{
+        flex-direction: column;
+    }
+
+    #extra-run div{
+        width: 95%;
+        margin-bottom: 15px;
+    }
+
+    #extra-run div:first-child button{
+        width: 100%;
+    }
+
+    #extra-run div:nth-child(2){
+        width: 95%;
+        margin-top: 25px;
     }
 
 }
