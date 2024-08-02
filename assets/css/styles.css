@@ -532,7 +532,6 @@ main>section{
 }
 
 #team>div:nth-child(2){
-    width: 90%;
     padding: 25px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -574,6 +573,65 @@ main>section{
 }
 
 /* end team */
+
+/* pricing */
+
+#pricing{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pricingdiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#pricingdiv>div{
+    width: 32%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+    border: 1px solid #303030;
+    background: #111;
+    border-radius: 3px;
+}
+
+#pricingdiv>div>h3{
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #6e6e6e;
+    padding-bottom: 5px;
+}
+
+#pricingdiv>div>button{
+    width: 90%;
+}
+
+.pricedetails{
+    width: 100%;
+}
+
+.pricedetails>p{
+    font-size: .7rem;
+    padding: 8px 15px;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.pricedetails>p:first-child{
+    border-top: 1px solid #4a4a4a;
+}
+
+/* end pricing */
 
 /* footer */
 
@@ -847,6 +905,19 @@ footer section:first-child{
 
     #team>div:nth-child(2){
         grid-template-columns: repeat(1,1fr);
+    }
+
+    #pricingdiv{
+        flex-direction: column;
+    }
+
+    #pricingdiv>div{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #pricingdiv>div>button{
+        width: 50%;
     }
 
     #footer-header{
