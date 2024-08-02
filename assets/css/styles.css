@@ -34,6 +34,17 @@ body{
     color: #b7b5b5;
 }
 
+.section-header{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-para{
+    font-size: .7rem;
+    margin-bottom: 15px;
+}
+
 /* header start */
 
 
@@ -220,6 +231,7 @@ header{
 /* main section */
 
 main{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,9 +426,8 @@ main>section{
 /* bmi calculator */
 
 #calculator{
-    /* width: 100%; */
+    width: 100%;
     background: #292929;
-    padding: 20px 15%;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -425,15 +436,15 @@ main>section{
 
 #bmihead{
     width: 50%;
-    margin: 20px auto;
+    margin: 20px 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #calculatordiv{
-    width: 100%;
-    margin-top: 20px;
+    width: 70%;
+    margin: 20px auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -444,6 +455,10 @@ main>section{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+#calculatordiv>div:nth-child(2){
+    width: 60%;
 }
 
 #calculatordiv>div:first-child h4{
@@ -465,10 +480,42 @@ main>section{
 #calculatordiv td{
     font-size: .6rem;
 }
-#calculatordiv>div:nth-child(2){
-    width: 60%;
+
+#factor{
+    grid-area: factor;}
+
+#bmiForm{
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas: ' . . ' ' . . ' ' factor factor ' ' . . ';
+    gap: 10px;
 }
 
+#calculatordiv input{
+    border-radius: 5px;
+    background: #4a4949;
+    border: none;
+    padding: 10px 15px;
+    font-size: .7rem;
+    color: #d7d4d4;
+    outline: none;
+}
+
+#calculatordiv select{
+    border-radius: 5px;
+    background: #4a4949;
+    border: none;
+    padding: 10px 15px;
+    font-size: .7rem;
+    color: #d7d4d4;
+    outline: none;
+}
+
+#calculatordiv option{
+    border: none;
+    padding: 10px;
+    color: #d7d4d4;
+}
 
 
 /* end bmi calculator */
@@ -545,6 +592,8 @@ footer>section{
 footer hr{
     width: 70%;
     margin: 20px;
+    border: none;
+    border-top: .5px solid #4a4a4a;
 }
 
 footer section:first-child{
@@ -552,6 +601,7 @@ footer section:first-child{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
     padding: 40px 0;
 }
 
@@ -573,28 +623,29 @@ footer section:first-child{
     line-height: 1.8;
 }
 
-#footer-link{
+.footer-link{
     display: flex;
-    flex-direction: column;
-    width: 20%;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
 }
 
-#footer-link h4{
+.footer-link h4{
     margin-bottom: 15px;
     font-size: 1.8rem;
 }
 
-#footer-link ul{
+.footer-link ul{
     list-style-type: none;
 }
 
-#footer-link ul li{
+.footer-link ul li{
     font-size: .8rem;
     margin-bottom: 15px;
     color: #999999;
 }
 
-#footer-link ul li:last-child{
+.footer-link ul li:last-child{
     margin-bottom: 0;
 }
 
@@ -661,16 +712,44 @@ footer section:first-child{
         height: auto;
     }
 
-    #extra-run div:first-child{
-        padding-right: 20px;
-    }
-
     #extra-run div:first-child h3{
         font-size: 1.8rem;
     }
+
+    #extra-run div:nth-child(2) {
+        width: 100%;
+        background-size: 400%;
+    }
+
+    #calculatordiv{
+        width: 94%;
+    }
+
+    #calculatordiv>div:first-child{
+        width: 50%;
+    }
+
+    #calculatordiv>div:nth-child(2){
+        width: 50%;
+    }
+
+    footer section:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-link{
+        width: 100%;
+        justify-content: space-between;
+    }
+
 }
 
 @media screen and (max-width:576px){
+
+    main>section {
+        width: 90%;
+    }
 
     #header-with-hero-section{
         padding:15px;
@@ -741,6 +820,56 @@ footer section:first-child{
     #extra-run div:nth-child(2){
         width: 95%;
         margin-top: 25px;
+        background-size: 200%;
+    }
+    #bmihead{
+        width: 90%;
+    }
+
+    #training{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #calculatordiv{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #calculatordiv>div:first-child{
+        width: 100%;
+    }
+
+    #calculatordiv>div:nth-child(2){
+        width: 100%;
+    }
+
+    #team>div:nth-child(2){
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #footer-header{
+        width: 90%;
+    }
+
+    #footer-header>p {
+        width: 90%;
+    }
+
+    footer section:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-link{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-link>div{
+        width: 100%;
     }
 
 }

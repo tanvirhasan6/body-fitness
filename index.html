@@ -142,7 +142,7 @@
             </div>
             <div id="calculatordiv">
                 <div>
-                    <h4 class="default-header">BMI Calculator Chart</h4>
+                    <h4 class="section-header">BMI Calculator Chart</h4>
                     <table>
                         <thead>
                             <th>BMI</th>
@@ -169,11 +169,23 @@
                     </table>
                 </div>
                 <div>
-                    <h4 class="default-header"></h4>
-                    <p class="default-para"></p>
-                    <form action="">
-                        <input type="number" name="height" id="height">
-                        <input type="number" name="weight" id="weight">
+                    <h4 class="section-header">Calculate your BMI</h4>
+                    <p class="section-para">We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym</p>
+                    <form action="" id="bmiForm">                        
+                        <input type="number" name="height" id="height" placeholder="Height cm">
+                        <input type="number" name="weight" id="weight" placeholder="Weight kg">
+                        <input type="number" name="age" id="age" placeholder="Age">
+                        <select name="gender" id="gender">
+                            <option value="">Gender</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                        <select name="factor" id="factor">
+                            <option value="">Select a Factor</option>
+                            <option value="i">Inhouse</option>
+                            <option value="o">Outside</option>
+                        </select>  
+                        <button type="submit" class="default-button active">Calculate</button>                     
                     </form>
                 </div>
             </div>            
@@ -238,25 +250,28 @@
                 <h2>Body Fitness</h2>
                 <p>We believe fitness should be accessible to everyone,  everywhere, regardless of income or access to a gym. With hundreds of professional workouts.</p>
             </div>
-            <div id="footer-link">
-                <h4>At a glance</h4>
-                <ul>
-                    <li>Service</li>
-                    <li>Contact</li>
-                    <li>Fitness</li>
-                    <li>About</li>
-                </ul>
+            <div class="footer-link">
+                <div>
+                    <h4>At a glance</h4>
+                    <ul>
+                        <li>Service</li>
+                        <li>Contact</li>
+                        <li>Fitness</li>
+                        <li>About</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>At a glance</h4>
+                    <ul>
+                        <li>Platform</li>
+                        <li>Library</li>
+                        <li>Trainer</li>
+                        <li>Downlaod</li>
+                    </ul>
+                </div>
             </div>
             
-            <div id="footer-link">
-                <h4>At a glance</h4>
-                <ul>
-                    <li>Platform</li>
-                    <li>Library</li>
-                    <li>Trainer</li>
-                    <li>Downlaod</li>
-                </ul>
-            </div>
         </section>
         <hr>
         <section>
